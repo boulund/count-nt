@@ -9,23 +9,13 @@ if len(argv)<2:
     print("usage: count.py [-] [FILE]")
 
 total = 0
-count = 0
 if "-" in argv:
     for line in stdin:
-        if line.startswith(">"):
-            total += count
-            count = 0
-        else:
-            count += len(line.strip())
-    total += count
+        if not line.startswith(">"):
+            total += len(line.strip())
 else:
     with open(argv[1]) as file:
         for line in file:
-            if line.startswith(">"):
-                total += count
-                count = 0
-            else:
-                count += len(line.strip())
-        total += count
-
+            if not line.startswith(">"):
+                total += len(line.strip())
 print(total)

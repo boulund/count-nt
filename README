@@ -1,0 +1,13 @@
+README for count_nt
+===================
+
+Author: Fredrik Boulund
+Purpose: I needed a small simple nucleotide counting tool and figured I'd write it in D.
+
+Comparisons
+===========
+There are three different programs in this repo:
+
+* count_nt.d  --  The first program
+* count.d     --  The second version, where I tried to optimize but made it slower.
+* count.py    --  A Python version for comparison. It's not that bad actually.
