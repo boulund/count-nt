@@ -7,6 +7,7 @@ from sys import stdin, exit, argv
 
 if len(argv)<2:
     print("usage: count.py [-] [FILE]")
+    exit()
 
 total = 0
 if "-" in argv:
